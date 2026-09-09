@@ -1,0 +1,32 @@
+.clock-face {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    /* box-shadow: 1px 1px 20px #f19224; */
+}
+
+.hand {
+    position: absolute;
+    width: 1px;
+    left: 50%;
+    bottom: 50%;
+    transform-origin: bottom center;
+}
+
+.hour-hand {
+    height: 30%;
+    background-color: black;
+}
+
+.min-hand {
+    height: 40%;
+    background-color: black;
+    transition: all ease 1s;
+}
+
+.sec-hand {
+    height: 45%;
+    background-color: rgb(228, 19, 19);
+}

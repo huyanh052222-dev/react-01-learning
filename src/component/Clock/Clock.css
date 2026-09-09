@@ -1,0 +1,129 @@
+:root {
+    --night-mode: #050505;
+    --night-mode-text: rgb(87, 246, 246);
+    --line-night-mode: rgb(87, 246, 246);
+    --night-mode-text-shadow: rgb(23, 216, 246);
+
+    --light-mode: #050505;
+    --light-mode-text: #fefc89;
+    --light-mode-text-second: #73d9fe;
+    --light-mode-text-third: #73d9fe;
+    --light-mode-text-shadow: #f19224;
+
+    --line-light-mode: #fefc89;
+}
+
+.clock-wrap {
+    font-family: "DS-Digital", monospace;
+    width: fit-content;
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 20px;
+    border: 5px solid rgb(182, 174, 174);
+
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    box-shadow: 1px 5px 30px var(--light-mode-text-shadow);
+}
+
+.line-light {
+    background-color: var(--line-light-mode);
+}
+
+.line-night {
+    background-color: var(--line-night-mode);
+}
+
+.light-mode {
+    background-color: var(--light-mode);
+    color: var(--light-mode-text);
+    text-shadow: 1px 1px 20px var(--light-mode-text-shadow);
+}
+
+.light-mode-text-second {
+    color: var(--light-mode-text-second)
+}
+
+.light-mode-text-third {
+    color: var(--light-mode-text-third);
+    text-shadow: none;
+}
+
+.night-mode {
+    background-color: var(--night-mode);
+    color: var(--night-mode-text);
+    text-shadow: 1px 1px 10px var(--night-mode-text-shadow);
+}
+
+.clock-style {
+    color: var(--clock-title);
+}
+
+.clock-wrap .left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.clock-wrap .bottom {
+    font-size: 120px;
+    
+}
+
+.line {
+    width: 2px;
+
+}
+
+.clock-wrap .right {
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 20px;
+
+}
+
+.date {
+
+    font-size: 20px;
+    padding: 10px;
+}
+
+.lineTemp {
+    width: 100%;
+    height: 2px;
+}
+
+.temp {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.temp-digit {
+    font-size: 32px;
+}
+
+.lineClock {
+    width: 2px;
+    height: 100px;
+}
+
+.rightClock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.colon {
+    animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.25;
+    }
+}
