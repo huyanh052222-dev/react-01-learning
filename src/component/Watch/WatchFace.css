@@ -1,10 +1,35 @@
+:root {
+    --night-mode: #050505;
+    --night-mode-text: rgb(87, 246, 246);
+    --line-night-mode: rgb(87, 246, 246);
+    --night-mode-text-shadow: rgb(23, 216, 246);
+
+    --light-mode: #050505;
+    --light-mode-text: #fefc89;
+    --light-mode-text-second: #73d9fe;
+    --light-mode-text-third: #73d9fe;
+    --light-mode-text-shadow: #f19224;
+
+    --line-light-mode: #fefc89;
+}
+
+.light-wrap {
+    background-color: var(--light-mode);
+    border: 1px solid var(--light-mode-text);
+    box-shadow: 1px 1px 10px var(--light-mode-text-shadow);
+}
+
+.night-wrap {
+    background-color: var(--night-mode);
+    border: 1px solid var(--line-night-mode);
+    box-shadow: 1px 1px 10px var(--night-mode-text-shadow);
+}
+
 .clock-face {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: white;
     position: relative;
-    /* box-shadow: 1px 1px 20px #f19224; */
 }
 
 .hand {
@@ -17,12 +42,12 @@
 
 .hour-hand {
     height: 30%;
-    background-color: black;
+    background-color: rgb(246, 243, 243);
 }
 
 .min-hand {
     height: 40%;
-    background-color: black;
+    background-color: rgb(246, 243, 243);
     transition: all ease 1s;
 }
 

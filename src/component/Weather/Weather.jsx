@@ -1,8 +1,9 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTemperatureQuarter } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 
 function Weather() {
     const [temperature, setTemperature] = useState(null);
-    const [city, setCity] = useState("");
 
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(async (posistion) => {
@@ -17,23 +18,12 @@ function Weather() {
 
             setTemperature(weatherData.current.temperature_2m);
 
-            const locationResponse = await fetch(
-                `https://nominatim.openstreetmap.org/reverse?lat=${last}&lon=${lon}&format=json`
-            );
-
-            const locationData = await locationResponse.json();
-
-            setCity(
-                locationData.address.city ||    
-                "Không xác định"
-            );
         })
     }, [])
 
     return (
         <div>
-            <h2>{city != null ? `${city}` : '--'}</h2>
-            <p>{temperature !== null ? `${temperature}°C` : "Loading..."}</p>
+            <p><FontAwesomeIcon icon={faTemperatureQuarter} />{temperature !== null ? `${temperature}°C` : "Loading..."}</p>
         </div>
     )
 }

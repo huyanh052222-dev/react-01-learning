@@ -4,8 +4,8 @@ import { Bell, Moon, Sun} from "lucide-react";
 import GetDay from '../Day/GetDay.jsx';
 import Weather from '../Weather/Weather.jsx'
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTemperatureQuarter } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faTemperatureQuarter } from "@fortawesome/free-solid-svg-icons";
 
 function Clock() {
     const [time, setTime] = useState(new Date())
@@ -24,7 +24,7 @@ function Clock() {
     })
 
     const hour = new Date().getHours();
-    const isDay = hour >= 6 && hour < 18;
+    const isDay = hour >= 6 && hour < 22;
 
     const hello = isDay ? "Good morning" : "Good Evening";
 
@@ -47,7 +47,6 @@ function Clock() {
                     <div className= {`lineTemp ${isDay ? "line-light" : "line-night"}`}></div>
                     <div className={`text ${isDay ? "light-mode-text-third" : "night-mode"}`}>{hello}</div>
                     <div className={`temp ${isDay ? "light-mode-text-third" : "night-mode"}`}>
-                        <FontAwesomeIcon icon={faTemperatureQuarter} />
                         <div className="temp-digit"><Weather/></div>
                     </div>
                 </div>

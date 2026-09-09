@@ -37,7 +37,7 @@
   font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --text: #9ca3af;
     --text-h: #f3f4f6;
