@@ -32,7 +32,7 @@ function App() {
     <>
       {/* <Parent/> */}
       {/* <Temperature/> */}
-      <Clock/>
+      <Clock/> 
     </>
     
   )

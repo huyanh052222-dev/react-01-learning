@@ -2,6 +2,7 @@ import Watch from '../Watch/Watch.jsx'
 import {useEffect, useState} from 'react';
 import { Bell, Moon, Sun} from "lucide-react";
 import GetDay from '../Day/GetDay.jsx';
+import Weather from '../Weather/Weather.jsx'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTemperatureQuarter } from "@fortawesome/free-solid-svg-icons";
@@ -47,7 +48,7 @@ function Clock() {
                     <div className={`text ${isDay ? "light-mode-text-third" : "night-mode"}`}>{hello}</div>
                     <div className={`temp ${isDay ? "light-mode-text-third" : "night-mode"}`}>
                         <FontAwesomeIcon icon={faTemperatureQuarter} />
-                        <div className="temp-digit">27°C</div>
+                        <div className="temp-digit"><Weather/></div>
                     </div>
                 </div>
             </div>
